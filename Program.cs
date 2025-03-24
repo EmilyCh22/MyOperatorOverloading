@@ -64,7 +64,7 @@ namespace Lesson9_MyOperatorOverloading
             };
 
             Console.WriteLine("\nThe first two foods will be set to 1.5 servings!");
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++) // Usage of overloaded unary operator
             {
                 chickenAlfredo++;
                 macAndCheese++;
@@ -78,8 +78,8 @@ namespace Lesson9_MyOperatorOverloading
                 Console.WriteLine("\nFood Name: " + food.FoodName);
                 Console.WriteLine("Serving Size: " + food.ServingSize);
                 Console.WriteLine("Servings: " + food.Servings);
-                var totalCal = food * food;
-                Console.WriteLine("Total Calories: " + totalCal.Calories); // Usage of overloaded binary operator
+                var totalCal = food * food; // Usage of overloaded binary operator
+                Console.WriteLine("Total Calories: " + totalCal.Calories);
             }
 
             Console.Write($"\nIs Chicken Alfredo more caloric than {newFood.FoodName}?  ");
@@ -90,13 +90,13 @@ namespace Lesson9_MyOperatorOverloading
             else { Console.Write("They are the same!"); }
 
             Console.Write($"\nIs Mac and Cheese more caloric than {newFood.FoodName}?  ");
-            if (macAndCheese > newFood)
+            if (macAndCheese > newFood) // Usage of overloaded comparison operator
             { Console.Write("Yes!"); }
             else if (macAndCheese < newFood)
             { Console.Write("No!"); }
             else { Console.Write("They are the same!"); }
 
-            Console.WriteLine("");
+            Console.WriteLine();
         }
 
         public static string InputValidString(string message)
